@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+:root {
+  --almostWhite: hsl(0, 0%, 98%);
+  --mediumGray: hsl(0, 0%, 41%);
+  --almostBlack: hsl(0, 0%, 8%);
+}
+
+body,
+ul,
+h1,
+h2,
+h3,
+a,
+img,
+figure {
+  padding: 0;
+  margin: 0;
+}
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  color: var(--mediumGray);
+  font-weight: 500;
+  font-size: 14px;
+  height: 100dvh;
+  
+}
+
+header {
+  padding: 1.75rem 3.5rem;
+  margin-bottom: 7.5rem;
+
+}
+
+h1 {
+  color: var(--almostBlack);
+  font-weight: 700;
+}
+
+header,
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 0.95em;
+  padding: 0.75rem 1rem;
+  color: inherit;
+  &:hover {
+    color: var(--almostBlack);
+    border: 1px solid var(--almostBlack);
+  }
+}
+
+.login {
+  border: none;
+  &:hover {
+    color: var(--almostBlack);
+    border: none;
+  }
+}
+
+.register {
+  border: 1.5px solid var(--mediumGray);
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 2rem;
+  & li {
+    padding: 0 1rem;
+    list-style: none;
+    vertical-align: middle;
+  }
+}
+
+.dropdown-features-content > a,.dropdown-company-content > a{
+  float: none;
+  display: block;
+	text-align: left;
+  padding: 0.5rem 1rem;
+}
+
+li:nth-child(1):hover .dropdown-features-content,li:nth-child(2):hover .dropdown-company-content{
+  display: block;
+}
+
+li:nth-child(1) span .up,li:nth-child(2) span .up {
+	display: none;
+}
+
+li:nth-child(1):hover span .down,li:nth-child(2):hover span .down {
+	display: none;
+}
+
+li:nth-child(1):hover span .up,li:nth-child(2):hover span .up {
+	display: inline-block;
+}
+
+.dropdown-features-content,.dropdown-company-content{
+  display: none;
+  position: absolute;
+	background: var(--almostWhite);
+	min-width: 125px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 999;
+  border-radius: 0.65rem;
+  top:3.5rem;
+}
+.dropdown-features-content{
+  left: 125px;
+}
+
+.dropdown-company-content > a{
+  text-align: left;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 8rem;
+  gap: 8rem;
+  z-index: -999;
+  & h1 {
+    font-size: 4.1rem;
+    line-height: 1;
+  }
+  & p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  & a {
+    background: var(--almostBlack);
+    color: var(--almostWhite);
+    font-size: 16px;
+    padding: 1.1rem 1.6rem;
+    &:hover {
+      background: var(--almostWhite);
+      color: var(--almostBlack);
+      border: 1px solid var(--almostBlack);
+    }
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  & .brands {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+figure {
+  & img {
+    width: 100%;
+  }
+}
+
+#mobile-menu,
+#mobile-view,
+.mobile-icon,
+.show {
+  display: none;
+}
+
+@media (280px <= width <= 480px) {
+  header {
+    margin-bottom: 0;
+    padding: 1.5rem 2rem;
+    position: relative;
+  }
+  #mobile-menu{
+    position: absolute;
+    right: 0;
+    z-index: 777;
+    width: 65%;
+    height: 100dvh;
+    top:0;
+    right: 0;
+    background: var(--almostWhite);
+    & ul {
+      display: flex;
+      flex-direction: column;
+      margin-top: 4rem;
+      & li {
+        padding: 1rem 0.5rem;
+        list-style: none;
+        vertical-align: middle;
+      }
+    }
+  }
+  .close{
+    z-index: 999;
+  }
+
+  #mobile-menu > div{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 1rem 1.5rem;
+    text-align: center;
+
+  }
+
+  .dropdown-features-content,.dropdown-company-content{
+    margin-top: 1rem;
+    position: static;
+  }
+  
+  .dropdown-company-content > a{
+    text-align: left;
+  }
+  
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0 2rem;
+    gap: 3rem;
+
+    & h1 {
+      font-size: 2.25rem;
+    }
+    & p {
+      text-align: center;
+    }
+  }
+  .container {
+    order: 2;
+    justify-content: center;
+    align-items: center;
+    & .brands {
+      margin-top: 2.5rem;
+    }
+  }
+  #mobile-view,
+  .mobile-icon {
+    display: block;
+  }
+  #desktop-view,
+  #desktop-menu {
+    display: none;
+  }
+}

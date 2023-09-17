@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <header>
+      <img src="/images/logo.svg" alt="snap logo" />
+      <nav id="desktop-menu">
+        <ul>
+          <li>
+            Features
+            <span
+              ><img src="/images/icon-arrow-down.svg" class="down" alt="arrow down icon"
+            /><img src="/images/icon-arrow-up.svg" class="up" alt="arrow down icon"
+            /></span>
+            <div class="dropdown-features-content">
+              <a href="#" class="login"><img src="images/icon-todo.svg" /> Todo List</a>
+              <a href="#" class="login"><img src="images/icon-calendar.svg" /> Calendar</a>
+              <a href="#" class="login"><img src="images/icon-reminders.svg" /> Reminders</a>
+              <a href="#" class="login"><img src="images/icon-planning.svg" /> Planning</a>
+            </div>
+          </li>
+          <li>
+            Company
+            <span
+              ><img src="/images/icon-arrow-down.svg" class="down" alt="arrow down icon"
+            /><img src="/images/icon-arrow-up.svg" class="up" alt="arrow down icon"
+            /></span>
+            <div class="dropdown-company-content">
+              <a href="#" class="login">History</a>
+              <a href="#" class="login">Our Team</a>
+              <a href="#" class="login">Blog</a>
+            </div>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+
+        <div>
+          <a href="#" class="login">Login</a
+          ><a href="#" class="register">Register</a>
+        </div>
+      </nav>
+      <div class="mobile-icon show">
+        <img src="/images/icon-menu.svg" alt="menu icon" />
+      </div>
+      <div class="mobile-icon close">
+        <img src="/images/icon-close-menu.svg" alt="close menu icon" />
+      </div>
+      <nav id="mobile-menu">
+        <ul>
+          <li class="features">
+            Features
+            <span
+              ><img src="/images/icon-arrow-down.svg" class="down" alt="arrow down icon"
+            /><img src="/images/icon-arrow-up.svg" class="up" alt="arrow up icon"
+            /></span>
+              <div class="dropdown-features-content features-content-mobile">
+                <a href="#" class="login"><img src="images/icon-todo.svg" /> Todo List</a>
+                <a href="#" class="login"><img src="images/icon-calendar.svg" /> Calendar</a>
+                <a href="#"
+                class="login"><img src="images/icon-reminders.svg" /> Reminders</a
+                >
+                <a href="#" class="login"><img src="images/icon-planning.svg" /> Planning</a>
+              </div>
+            
+          </li>
+          <li class="company">
+            Company
+            <span
+              ><img src="/images/icon-arrow-down.svg" class="down" alt="arrow down icon"
+            /><img src="/images/icon-arrow-up.svg" class="up" alt="arrow down icon"
+            /></span>
+              <div class="dropdown-company-content company-content-mobile">
+                <a href="#">History</a>
+                <a href="#">Our Team</a>
+                <a href="#">Blog</a>
+              </div>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+        <div>
+          <a href="#" class="login">Login</a
+          ><a href="#" class="register">Register</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <a href="#">Learn more</a>
+        <div class="brands">
+          <img src="/images/client-databiz.svg" alt="databiz" /><img
+            src="/images/client-audiophile.svg"
+            alt="audiophile"
+          /><img src="/images/client-meet.svg" alt="meet" /><img
+            src="/images/client-maker.svg"
+            alt="maker"
+          />
+        </div>
+      </div>
+
+      <figure>
+        <img
+          src="/images/image-hero-desktop.png"
+          alt="hero image for desktop"
+          id="desktop-view"
+        />
+        <img
+          src="/images/image-hero-mobile.png"
+          alt="hero image for mobile"
+          id="mobile-view"
+        />
+      </figure>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
